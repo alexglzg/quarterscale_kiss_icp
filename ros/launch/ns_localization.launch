@@ -1,0 +1,17 @@
+<launch>
+
+    <group ns='roboat1'>
+
+        <!--- Lidar Odometry -->
+        <include file="$(find kiss_icp)/launch/odometry.launch" />
+
+        <!--- Run EKF -->
+        <include file="$(find kiss_icp)/launch/ekf.launch" />
+
+        <!--- Robot State TF -->
+        <include file="$(find kiss_icp)/launch/module_robot_state_publisher.launch" />
+
+
+    </group>
+
+</launch>

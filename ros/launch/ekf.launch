@@ -1,0 +1,9 @@
+<launch>
+    
+    <rosparam command="load" file="$(find kiss_icp)/config/robot_localization.yaml" />
+
+    <!-- EKF Lidar-->
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_lidar" respawn="true">
+    </node>
+
+</launch>
